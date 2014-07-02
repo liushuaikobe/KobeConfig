@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import smtplib
 from email.mime.text import MIMEText
+from email.Header import Header
 
 result = {"name": [], "cover": [], "desc": [], "link": [], "price": []}
 
@@ -46,12 +47,8 @@ mail_config = {
 
 def send_mail(sbj, content, from_whom=mail_config['from'], to_whom=mail_config['to'], server=mail_config['server'],
               username=mail_config['username'], pwd=mail_config['pwd']):
-    try:
-        content = content.encode('utf-8')
-    except UnicodeDecodeError:
-        pass
-    msg = MIMEText(content, "html")
-    msg['Subject'] = sbj
+    msg = MIMEText(content, "html", "utf-8")
+    msg['Subject'] = Header(sbj, "utf-8") 
     msg['From'] = from_whom
     msg['To'] = to_whom
     s = smtplib.SMTP(server)
@@ -78,4 +75,7 @@ def build_html():
 
 if __name__ == "__main__":
     parse(get_page())
-    send_mail("Kindle今日特价书", build_html())
+    html = build_html()
+    sbj = "Kindle今日特价书"
+    send_mail(sbj, html)
+    send_mail(sbj, html, to_whom="zouliping007@163.com")
