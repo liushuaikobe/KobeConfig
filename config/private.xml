@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<root>
+    <!-- beigin razer -->
+    <item>
+        <name>razer20140403</name>
+        <identifier>private.razer</identifier>
+        <autogen>
+            __PointingButtonToKey__
+            PointingButton::BUTTON4, 
+            KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>
+            __PointingButtonToKey__
+            PointingButton::BUTTON5,
+            KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>
+            __PointingButtonToKey__
+            PointingButton::MIDDLE,
+            KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>
+            __KeyToKey__
+            KeyCode::PAGEUP,
+            KeyCode::F11, ModifierFlag::FN
+        </autogen>
+        <autogen>
+            __KeyToKey__
+            KeyCode::PAGEDOWN,
+            KeyCode::F12, ModifierFlag::FN
+        </autogen>
+        <autogen>
+            __KeyToKey__
+            KeyCode::HOME,
+            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L
+        </autogen>
+        <autogen>
+            __KeyToKey__
+            KeyCode::END,
+            KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L
+        </autogen>
+    </item>
+</root>
