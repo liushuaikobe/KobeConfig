@@ -79,11 +79,9 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gs="git status"
-alias gf="git diff"
-alias gl="git log"
 alias gloo="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias fucking="sudo"
+alias fuck='$(thefuck $(fc -ln -1))'
 alias rmDerivedData="rm -rf /Users/vars/Library/Developer/Xcode/DerivedData/*"
 alias surfing="python ~/task.py"
 

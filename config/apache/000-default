@@ -56,13 +56,44 @@
     </Location>
 </VirtualHost>
 
-WSGIPythonPath /var/gitradar/GitRadarSearchServiceV2
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	ServerName loft.vars.me
+
+	ProxyRequests off
+
+	<Proxy *>
+		Order deny,allow
+		allow from all
+	</Proxy>
+
+	<Location />
+		ProxyPass http://localhost:2368/
+		ProxyPassReverse http://localhost:2368/
+	</Location>
+</VirtualHost>
+
+WSGIPythonPath /var/gitradar/GitRadarSearchServiceV2:/var/pythonapp/littlesnail
 <VirtualHost *:80>
 	ServerAdmin webmaster@localhost
 	ServerName search.vars.me
 
 	WSGIScriptAlias / /var/gitradar/GitRadarSearchServiceV2/GitRadarSearchServiceV2/wsgi.py
 	<Directory /var/gitradar/GitRadarSearchServiceV2/GitRadarSearchServiceV2>
+	<Files wsgi.py>
+    	Order deny,allow
+    	Allow from all
+	</Files>
+	</Directory>
+</VirtualHost>
+
+# WSGIPythonPath /var/pythonapp/littlesnail
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	ServerName littlesnail.vars.me
+
+	WSGIScriptAlias / /var/pythonapp/littlesnail/littesnail/wsgi.py
+	<Directory /var/pythonapp/littlesnail/littesnail>
 	<Files wsgi.py>
     	Order deny,allow
     	Allow from all
