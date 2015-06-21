@@ -1,4 +1,8 @@
 var domains = {
+  "addthis.com":1,
+  "cloudflare.com":1,
+  "leetcode.com":1,
+  "rackcdn.com":1,
   "stripe.com":1,
   "digitalocean.com":1,
   "disqus.com":1,
