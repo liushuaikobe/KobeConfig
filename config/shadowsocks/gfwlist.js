@@ -1,4 +1,8 @@
 var domains = {
+  "gitbooks.io": 1,
+  "cloudfront.net":1,
+  "macrumors.com":1,
+  "fbinfer.com":1,
   "addthis.com":1,
   "cloudflare.com":1,
   "leetcode.com":1,
