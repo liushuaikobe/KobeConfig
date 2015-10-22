@@ -1,0 +1,31 @@
+! Put user rules line by line in this file.
+! See https://adblockplus.org/en/filter-cheatsheet
+ccll1.net
+jetbrains.com
+gitbooks.io
+cloudfront.net
+macrumors.com
+fbinfer.com
+addthis.com
+cloudflare.com
+leetcode.com
+rackcdn.com
+stripe.com
+digitalocean.com
+disqus.com
+githubusercontent.com
+amazonaws.com
+cdninstagram.com
+akamaihd.net
+openload.io
+up2stream.com
+dropbox.com
+evernote.com
+wp.com
+digg.com
+gravatar.com
+v2ex.com
+namecheap.com
+answerdash.com
+optimizely.com
+shopperapproved.com
